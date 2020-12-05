@@ -190,13 +190,18 @@ console.log($strider)
 const forgeTheFellowShip = () => {
 
   // 1. create a new div with an id 'the-fellowship'
-
   // 2. add an h1 with the text 'The Fellowship' to this new div
-
   // 3. append the fellowship to middle-earth
-
   // 4. add the unordered lists of hobbits and buddies to 'the-fellowship'
-
+const $fellowship = $('<div />').attr('id', 'the-fellowship');
+$($fellowship).wrapInner('<h1>The Fellowship</h1>');
+$('#middle-earth').append($fellowship);
+const $buddyFellowship = $('aside').find('ul')
+console.log(`buddy: ${$buddyFellowship}`)
+const $hobbitFellowship = $('#Rivendell').find('ul')
+console.log(`hobbit: ${$hobbitFellowship}`)
+$($fellowship, 'h1').append($buddyFellowship, $hobbitFellowship)
+console.log($fellowship)
 };
 
 // COMMIT YOUR WORK
