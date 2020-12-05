@@ -118,12 +118,12 @@ const makeBaddies = () => {
   // 1. display an unordered list of baddies in Mordor
   // 2. give each of the baddies a class of "baddy"
   // 3. remember to append them to Mordor
-const $baddiesList = $('<ul />')
+const $baddiesList = $('<ul />');
 for (let i=0; i<baddies.length; i++){
   const $eachBaddie = $(`<li>${baddies[i]}</li>`);
-$($eachBaddie).addClass('baddy');
-$($baddiesList).append($eachBaddie);
-}
+  $($eachBaddie).addClass('baddy');
+  $($baddiesList).append($eachBaddie);
+};
 $('#Mordor').append($baddiesList);
 };
 
@@ -136,11 +136,17 @@ $('#Mordor').append($baddiesList);
 const makeBuddies = () => {
 
   // 1. create an aside tag and append it to middle-earth below mordor
-
   // 2. display an unordered list of buddies in the aside
-
   // 3. give each of the buddies a class of "buddy"
-
+  const $asideTag = $('<aside />');
+  const $buddiesList = $('<ul />');
+  for (let i=0; i<buddies.length; i++){
+    const $eachBuddy = $(`<li>${buddies[i]}</li>`);
+    $($eachBuddy).addClass('buddy');
+    $($buddiesList).append($eachBuddy);
+  };
+$($asideTag).wrapInner($buddiesList);
+$('#middle-earth').append($asideTag);
 };
 
 // COMMIT YOUR WORK
