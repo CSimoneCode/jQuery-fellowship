@@ -56,7 +56,7 @@ for (let i=0; i<lands.length; i++){
   //   3a. creates an article tag (there should be one for each land when the loop is done)
 const $landArticle = $('<a />');
   //   3b. gives each land article an `id` tag of the corresponding land name
-  $($landArticle).attr('id', lands[i])
+  $($landArticle).attr('id', lands[i]);
   // $('a').each(function($land[i]){
 //   $($land[i]).attr('id', `${$land[i]}`)
 // })
@@ -78,13 +78,16 @@ const makeHobbits = () => {
   console.log('Make hobbits');
 
   // 1. display an unordered list of the hobbits in the shire.
-
   // 2. give each hobbit a class of "hobbit"
-
+  const $hobbitList = $('<ul />')
+  for (let i=0; i<hobbits.length; i++){
+    const $eachHobbit = $(`<li>${hobbits[i]}</li>`);
+  $($eachHobbit).addClass('hobbit');
+  $($hobbitList).append($eachHobbit);
+  }
+  $('#The-Shire').append($hobbitList);
   // hint: create a 'ul' outside the loop upon which to append the 'li's
-
   // hint: get 'The-Shire' by using its id
-
 };
 
 // COMMIT YOUR WORK
