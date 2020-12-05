@@ -116,10 +116,15 @@ $($frodo).append($ring)
 const makeBaddies = () => {
 
   // 1. display an unordered list of baddies in Mordor
-
   // 2. give each of the baddies a class of "baddy"
-
   // 3. remember to append them to Mordor
+const $baddiesList = $('<ul />')
+for (let i=0; i<baddies.length; i++){
+  const $eachBaddie = $(`<li>${baddies[i]}</li>`);
+$($eachBaddie).addClass('baddy');
+$($baddiesList).append($eachBaddie);
+}
+$('#Mordor').append($baddiesList);
 };
 
 // COMMIT YOUR WORK
