@@ -288,7 +288,7 @@ const thereAndBackAgain = () => {
 };
 
 // COMMIT YOUR WORK
-// The commit message should read: "Chapter 13 complete -Gollum and the ring are gone, the baddies are done, and the hobbits are back in the shire".
+// The commit message should read: "Chapter 13 complete -Gollum and the ring are gone, the baddies are done, and the hobbits are back in the shire"
 
 
 // =====================================
