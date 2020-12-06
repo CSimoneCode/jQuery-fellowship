@@ -266,14 +266,12 @@ const weWantsIt = () => {
   // 3. Move Gollum into Mount Doom
   const $gollum = $('<div id="gollum">Gollum</div>')
   const $theRing = $('#the-ring')
-  console.log($gollum)
-  console.log($theRing)
   $($gollum).append($theRing)
   $('#Mordor').append($gollum)
 };
 
 // COMMIT YOUR WORK
-// The commit message should read: "Chapter 12 complete - Gollum is trying to get the ring".
+// The commit message should read: "Chapter 12 complete - Gollum is trying to get the ring"
 
 // ============
 // Chapter 13
@@ -281,11 +279,12 @@ const weWantsIt = () => {
 const thereAndBackAgain = () => {
 
   // 1. remove Gollum and the Ring from the DOM
-
   // 2. remove all the baddies from the DOM
-
   // 3. Move all the hobbits back to the shire
-
+  $('#gollum').remove()
+  $('.baddy').remove()
+  const $hobbits = $('body').find('.hobbit')
+  $('#The-Shire').append($hobbits)
 };
 
 // COMMIT YOUR WORK
